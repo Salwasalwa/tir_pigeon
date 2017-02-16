@@ -5,7 +5,7 @@ div {
     background: pink;
     border: 1px solid black;
 }
-img {
+#image {
     width: 7rem;
     height: 7rem;
     position:absolute;

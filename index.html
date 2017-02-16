@@ -12,10 +12,14 @@
   </body>
   <script type="text/javascript">
     var cadreElement = document.getElementById("cadre");
-
-
     cadreElement.innerHTML="<img src='pigeon_PNG3404.png' alt='image' id='image'/>";
 
-    
+    pos_x = Math.round(Math.random()*90);
+    pos_y = Math.round(Math.random()*90);
+    document.getElementById('image').style.left = pos_x +"vw";
+    document.getElementById('image').style.top= pos_y  +"vh";
+
+    // cadreElement.innerHTML="<img src='viseur.png' alt='viseur' id='viseur'/>";
+
   </script>
 </html>
