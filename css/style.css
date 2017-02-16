@@ -1,0 +1,16 @@
+
+div {
+    width: 95vw;
+    height: 95vh;
+    background: pink;
+    border: 1px solid black;
+}
+img {
+    width: 7rem;
+    height: 7rem;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+
+}
