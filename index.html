@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+    setTimeout("activar_movimiento()",100);
+recalped noitcnuf
+
+;itcnuf    <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -14,12 +17,23 @@
     var cadreElement = document.getElementById("cadre");
     cadreElement.innerHTML="<img src='pigeon_PNG3404.png' alt='image' id='image'/>";
 
-    pos_x = Math.round(Math.random()*90);
-    pos_y = Math.round(Math.random()*90);
-    document.getElementById('image').style.left = pos_x +"vw";
-    document.getElementById('image').style.top= pos_y  +"vh";
+    var imageElement = document.getElementById("image");
 
-    // cadreElement.innerHTML="<img src='viseur.png' alt='viseur' id='viseur'/>";
+
+        pos_x = Math.round(Math.random()*75);
+        pos_y = Math.round(Math.random()*75);
+        document.getElementById('image').style.left = pos_x +"vw";
+        document.getElementById('image').style.top= pos_y  +"vh";
+
+
+    // setTimeout("depace()",100);
+
+
+
+    imageElement.addEventListener('click', function(){
+        imageElement.style.display="none";
+    })
+
 
   </script>
 </html>
