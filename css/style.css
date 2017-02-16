@@ -9,7 +9,7 @@ body {
     cursor: url('../liste6.png'), pointer;
     position: relative;
 }
-#image {
+.image {
     width: 7rem;
     height: 7rem;
     position:absolute;

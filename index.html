@@ -1,7 +1,4 @@
-    setTimeout("activar_movimiento()",100);
-recalped noitcnuf
-
-;itcnuf    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -9,30 +6,45 @@ recalped noitcnuf
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-    <div id="cadre">
+    <div id="cadre" >
 
     </div>
   </body>
   <script type="text/javascript">
     var cadreElement = document.getElementById("cadre");
-    cadreElement.innerHTML="<img src='pigeon_PNG3404.png' alt='image' id='image'/>";
 
-    var imageElement = document.getElementById("image");
-
-
+    function creer(){
+        var imageElement = document.createElement("img");
+        imageElement.src = 'pigeon_PNG3404.png';
+        imageElement.className = "image";
         pos_x = Math.round(Math.random()*75);
         pos_y = Math.round(Math.random()*75);
-        document.getElementById('image').style.left = pos_x +"vw";
-        document.getElementById('image').style.top= pos_y  +"vh";
+        imageElement.style.left = pos_x +"vw";
+        imageElement.style.top= pos_y  +"vh";
+        cadreElement.appendChild(imageElement);
+        
+        imageElement.addEventListener('click', function(){
 
-
-    // setTimeout("depace()",100);
-
-
-
-    imageElement.addEventListener('click', function(){
         imageElement.style.display="none";
-    })
+        });
+    }
+    setInterval('creer()',1000);
+
+
+    function deplacer(){
+
+        var toutImage = document.getElementsByClassName("image");
+
+        for (i=0; i < toutImage.length; i++){
+
+            pos_x = Math.round(Math.random()*75);
+            pos_y = Math.round(Math.random()*75);
+            toutImage.style.left = pos_x +"vw";
+            toutImage.style.top= pos_y  +"vh";
+        }
+    }
+    setInterval('deplacer()',1000);
+
 
 
   </script>
