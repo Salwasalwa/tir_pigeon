@@ -22,30 +22,31 @@
         imageElement.style.left = pos_x +"vw";
         imageElement.style.top= pos_y  +"vh";
         cadreElement.appendChild(imageElement);
-        
+
         imageElement.addEventListener('click', function(){
 
         imageElement.style.display="none";
+
         });
     }
-    setInterval('creer()',1000);
 
+    setInterval('creer()',1000);
+    // creer()
 
     function deplacer(){
 
-        var toutImage = document.getElementsByClassName("image");
+        var toutImage = document.getElementsByTagName("img");
 
         for (i=0; i < toutImage.length; i++){
 
-            pos_x = Math.round(Math.random()*75);
-            pos_y = Math.round(Math.random()*75);
-            toutImage.style.left = pos_x +"vw";
-            toutImage.style.top= pos_y  +"vh";
+            poss_x = Math.round(Math.random()*75);
+            poss_y = Math.round(Math.random()*75);
+            toutImage[i].style.left = poss_x +"vw";
+            toutImage[i].style.top= poss_y  +"vh";
+
         }
     }
     setInterval('deplacer()',1000);
-
-
 
   </script>
 </html>
